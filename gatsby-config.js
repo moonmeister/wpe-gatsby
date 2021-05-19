@@ -6,7 +6,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "https://atlasfun.wpengine.com/graphql",
+        url: process.env.WPGRAPHQL,
       },
     },
     "gatsby-plugin-postcss",
