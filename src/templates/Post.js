@@ -6,7 +6,7 @@ export default function PostPage({ data: { wpPost: {title, content} } }) {
 
   return (
       <section>
-      <Link to="/category/uncategorized">Return to Posts</Link>
+      <Link to="/">Return to Home</Link>
 
         <h1>
             {title}
