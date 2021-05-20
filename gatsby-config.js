@@ -1,3 +1,5 @@
+
+
 module.exports = {
   siteMetadata: {
     title: "WPE Gatsby",
@@ -6,7 +8,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: process.env.WPGRAPHQL,
+        url: process.env.WPGRAPHQL || "https://alexwpegatsby.wpengine.com/graphql",
       },
     },
     "gatsby-plugin-postcss",
