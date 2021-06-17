@@ -21,6 +21,7 @@ async function createIndividualBlogPostPages({ posts, gatsbyUtilities }) {
         component: path.resolve(`./src/templates/Post.js`),
         context: {
           id: post.id,
+          databaseId: post.databaseId,
           previousPostId: previous ? previous.id : null,
           nextPostId: next ? next.id : null,
         },
@@ -37,6 +38,7 @@ async function createIndividualCategoryPages({ categories, gatsbyUtilities }) {
         component: path.resolve(`./src/templates/Category.js`),
         context: {
           id: category.id,
+          databaseId: category.databaseId,
         },
       })
     )
@@ -50,13 +52,16 @@ async function getPosts({ graphql, reporter }) {
         edges {
           previous {
             id
+            databaseId
           }
           post: node {
             id
+            databaseId
             uri
           }
           next {
             id
+            databaseId
           }
         }
       }
@@ -81,6 +86,7 @@ async function getCategories({ graphql, reporter }) {
         edges {
           category: node {
             id
+            databaseId
             uri
           }
         }
