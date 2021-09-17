@@ -15,7 +15,7 @@ exports.createPages = async (gatsbyUtilities) => {
  */
 async function createIndividualBlogPostPages({ posts, gatsbyUtilities }) {
   return Promise.all(
-    posts.map(({ previous, post, next }) =>
+    posts.map(({ previous, post, next }, i) =>
       gatsbyUtilities.actions.createPage({
         path: post.uri,
         component: path.resolve(`./src/templates/Post.js`),
@@ -25,6 +25,7 @@ async function createIndividualBlogPostPages({ posts, gatsbyUtilities }) {
           previousPostId: previous ? previous.id : null,
           nextPostId: next ? next.id : null,
         },
+        defer: (i >= 4) ? true : false,
       })
     )
   );
