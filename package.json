@@ -14,7 +14,7 @@
     "build": "gatsby build",
     "serve": "gserve -p 8080",
     "clean": "gatsby clean",
-    "wpe-build": ""
+    "wpe-build": "node ./atlas-build.mjs"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

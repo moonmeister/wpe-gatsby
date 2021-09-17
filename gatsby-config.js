@@ -31,5 +31,6 @@ module.exports = {
       },
       __key: "images",
     },
+    "gatsby-plugin-fastify",
   ],
 };
