@@ -53,7 +53,6 @@ const descriptionStyle = {
 // markup
 const IndexPage = ( {data}) => {
   const { allWpPost: {posts }} = data
-  console.log(data)
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
