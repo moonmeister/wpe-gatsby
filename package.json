@@ -11,7 +11,7 @@
     "develop": "gatsby develop -p 8080",
     "dev": "gatsby develop",
     "start": "node ./atlas-serve.mjs",
-    "build": "gatsby build",
+    "build": "GATSBY_LOGGER=yurnalist gatsby build",
     "serve": "gserve -p 8080",
     "clean": "gatsby clean",
     "wpe-build": ""
