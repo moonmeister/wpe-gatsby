@@ -8,16 +8,17 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p 8080",
     "dev": "gatsby develop",
-    "start": "gatsby develop -p 8080 --verbose",
+    "start": "node ./atlas-serve.mjs",
     "build": "gatsby build",
     "serve": "gserve -p 8080",
     "clean": "gatsby clean",
     "wpe-build": ""
   },
   "dependencies": {
-    "fastify": "^3.21.2",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.21.3",
     "fastify-compress": "^3.6.0",
     "fastify-static": "^4.2.3",
     "gatsby": "^3.13.1",
