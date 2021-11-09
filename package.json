@@ -11,7 +11,7 @@
     "develop": "gatsby develop -p 8080",
     "dev": "gatsby develop",
     "start": "node ./atlas-serve.mjs",
-    "build": "GATSBY_LOGGER=yurnalist gatsby build",
+    "build": "gatsby build",
     "serve": "gserve -p 8080",
     "clean": "gatsby clean",
     "wpe-build": "node ./atlas-build.mjs"
@@ -19,6 +19,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "fastify": "^3.21.3",
+    "fastify-accepts": "^2.1.0",
     "fastify-compress": "^3.6.0",
     "fastify-static": "^4.2.3",
     "gatsby": "^4.0.0",
